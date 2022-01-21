@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Monomial
+comment1.params=myVars\ myCoeff
+comment1.target=Monomial(java.util.Set,\ int)
+comment2.params=m2
+comment2.target=Monomial\ multiply(Monomial)
+comment3.params=m2
+comment3.target=boolean\ match(Monomial)
+numComments=4
