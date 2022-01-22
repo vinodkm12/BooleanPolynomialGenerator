@@ -2,11 +2,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.HashSet;
 
+/*
+Class for multilinear, 0-1 valued polynomials that represent boolean functions
+Used as tool in proof of the Log-Rank conjecture for AND matrices
+Inspiration for project from Dr. Kaave Hosseini, Carnegie Mellon University
+*/
 public class Polynomial
 {
+    //Stores Monomial terms in the polynomial
     public List<Monomial> myVars;
     /**
      * Constructor for objects of class Polynomial
+     * int n: number of variables
+     * vals: required to be of size 2^n
+     * vals contains values of the polynomial on all 2^n inputs
+     * order of the inputs is FFF, FFT, FTF, FTT, TFF, ... (most natural order)
      */
     public Polynomial(boolean[] vals, int n)
     {
@@ -55,11 +65,13 @@ public class Polynomial
         this.myVars = build.myVars;
     }
     
+    //Constructor for Polynomial from List of Monomials
     public Polynomial(List<Monomial> x)
     {   
         myVars = x;
     }
     
+    //Add two polynomials together
     public Polynomial add(Polynomial p2)
     {
         boolean inflag = true;
@@ -103,6 +115,7 @@ public class Polynomial
         return new Polynomial(build);
     }
     
+    //Multiply two polynomials together
     public Polynomial multiply(Polynomial p2)
     {
         Monomial temp;
@@ -132,6 +145,7 @@ public class Polynomial
         return new Polynomial(newlist);
     }
     
+    //Convert polynomial to simple string representation
     public String toString()
     {
         String build = "";
