@@ -4,6 +4,8 @@ class Driver
 {
     public static void main(String[] args)
     {
+        //EXAMPLE TEST CODE
+        
         /*
         boolean[] test = {false, true, true, false, false, true, true, true, false, true, true, true, true, false, true, true,
                            true, false, false, true, true, true, false, true, true, false, false, true, true, false, true, false   };
@@ -18,6 +20,8 @@ class Driver
         Polynomial x = new Polynomial(test2, 5);
         System.out.println(x);     
         */
+        
+       
        
        boolean[] test = {false, false, true, false, false, false, false, true};
        Polynomial x = new Polynomial(test, 3);
